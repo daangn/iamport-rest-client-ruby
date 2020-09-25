@@ -139,6 +139,21 @@ $ gem install iamport
 
 TODO: Write usage instructions here
 
+## Publish
+토큰 등록 후, Publish to Github Packages 
+
+[토큰 등록 가이드](https://docs.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-rubygems-for-use-with-github-packages#authenticating-to-github-packages)
+
+```
+$ gem build iamport.gemspec
+```
+
+```
+$ gem push --key github \
+--host https://rubygems.pkg.github.com/daangn \
+iamport-0.3.0.gem
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
